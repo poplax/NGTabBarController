@@ -157,8 +157,8 @@
         CGContextSaveGState(context);
         
         if (self.drawGloss) {
-            CGPoint start;
-            CGPoint end;
+            CGPoint start = CGPointMake(bounds.origin.x + bounds.size.width, bounds.origin.y);
+            CGPoint end = CGPointMake(bounds.origin.x, bounds.origin.y);
             
             // draw gradient
             
