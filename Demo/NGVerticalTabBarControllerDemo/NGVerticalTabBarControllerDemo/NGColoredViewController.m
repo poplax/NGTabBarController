@@ -118,12 +118,12 @@
 
 - (void)handleButtonPress:(id)sender {
     if (_presentedModally) {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         NGColoredViewController *vc = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
         
         vc->_presentedModally = YES;
-        [self.ng_tabBarController presentModalViewController:vc animated:YES];
+        [self.ng_tabBarController presentViewController:vc animated:YES completion:nil];
     }
 }
 

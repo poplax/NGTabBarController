@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0234A0821BD51B4C001600C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0234A0811BD51B4C001600C4 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 		9B294EE01546DA96004E4A63 /* NGTestTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B294EDF1546DA96004E4A63 /* NGTestTabBarController.m */; };
 		9B6CDB46154B46A400E6B3C4 /* liveradio.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6CDB3E154B46A400E6B3C4 /* liveradio.png */; };
 		9B6CDB47154B46A400E6B3C4 /* liveradio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6CDB3F154B46A400E6B3C4 /* liveradio@2x.png */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0234A0811BD51B4C001600C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9B294EDE1546DA96004E4A63 /* NGTestTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTestTabBarController.h; sourceTree = "<group>"; };
 		9B294EDF1546DA96004E4A63 /* NGTestTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTestTabBarController.m; sourceTree = "<group>"; };
 		9B6CDB3E154B46A400E6B3C4 /* liveradio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = liveradio.png; path = NGVerticalTabBarControllerDemo/Images/liveradio.png; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		9BEA2B4714ED1B4A00AEE977 = {
 			isa = PBXGroup;
 			children = (
+				0234A0811BD51B4C001600C4 /* Default-568h@2x.png */,
 				9BEA2B5C14ED1B4A00AEE977 /* NGVerticalTabBarControllerDemo */,
 				9B6CDB3D154B469800E6B3C4 /* Resources */,
 				9BEA2B5514ED1B4A00AEE977 /* Frameworks */,
@@ -188,7 +191,7 @@
 		9BEA2B4914ED1B4A00AEE977 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "NOUS Wissensmanagement GmbH";
 			};
 			buildConfigurationList = 9BEA2B4C14ED1B4A00AEE977 /* Build configuration list for PBXProject "NGVerticalTabBarControllerDemo" */;
@@ -232,6 +235,7 @@
 				9BEA2B6114ED1B4A00AEE977 /* InfoPlist.strings in Resources */,
 				9B6CDB46154B46A400E6B3C4 /* liveradio.png in Resources */,
 				9B6CDB47154B46A400E6B3C4 /* liveradio@2x.png in Resources */,
+				0234A0821BD51B4C001600C4 /* Default-568h@2x.png in Resources */,
 				9B6CDB48154B46A400E6B3C4 /* myradio.png in Resources */,
 				9B6CDB49154B46A400E6B3C4 /* myradio@2x.png in Resources */,
 				9B6CDB4A154B46A400E6B3C4 /* news.png in Resources */,
@@ -281,12 +285,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -294,10 +307,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-fobjc-arc";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,16 +326,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-fobjc-arc";
 				SDKROOT = iphoneos;
@@ -333,11 +363,12 @@
 				GCC_PREFIX_HEADER = "NGVerticalTabBarControllerDemo/NGVerticalTabBarControllerDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../../NGTabBarController/**";
 				INFOPLIST_FILE = "NGVerticalTabBarControllerDemo/NGVerticalTabBarControllerDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = (
 					"-fobjc-arc",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nousguide.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -350,11 +381,12 @@
 				GCC_PREFIX_HEADER = "NGVerticalTabBarControllerDemo/NGVerticalTabBarControllerDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../../NGTabBarController/**";
 				INFOPLIST_FILE = "NGVerticalTabBarControllerDemo/NGVerticalTabBarControllerDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = (
 					"-fobjc-arc",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nousguide.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
