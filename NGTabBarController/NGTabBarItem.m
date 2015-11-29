@@ -1,7 +1,7 @@
 #import "NGTabBarItem.h"
 
 
-#define kNGDefaultTintColor                 [UIColor colorWithRed:41.0/255.0 green:147.0/255.0 blue:239.0/255.0 alpha:1.0]
+#define kNGDefaultTintColor                 [UIColor colorWithRed:41.f/255.f green:147.f/255.f blue:239.f/255.f alpha:1.f]
 #define kNGDefaultTitleColor                [UIColor lightGrayColor]
 #define kNGDefaultSelectedTitleColor        [UIColor whiteColor]
 #define kNGImageOffset                       5.f
@@ -64,7 +64,7 @@
     
     if (self.image != nil) {
         CGFloat imageOffset = self.title.length > 0 ? kNGImageOffset : 0.f;
-        CGFloat textTop = floor((self.bounds.size.height - self.image.size.height)/2.f) - imageOffset + self.image.size.height + 2.f;
+        CGFloat textTop = floorf((self.bounds.size.height - self.image.size.height)/2.f) - imageOffset + self.image.size.height + 2.f;
         
         self.titleLabel.frame = CGRectMake(0.f, textTop, self.bounds.size.width, self.titleLabel.font.lineHeight);
     } else {
@@ -105,12 +105,12 @@
                 CGColorRef cgShadowColor = [[UIColor blackColor] CGColor];
                 
                 // setup gradient
-                CGFloat alpha0 = 0.8;
-                CGFloat alpha1 = 0.6;
-                CGFloat alpha2 = 0.0;
-                CGFloat alpha3 = 0.1;
-                CGFloat alpha4 = 0.5;
-                CGFloat locations[5] = {0,0.55,0.55,0.7,1};
+                CGFloat alpha0 = 0.8f;
+                CGFloat alpha1 = 0.6f;
+                CGFloat alpha2 = 0.0f;
+                CGFloat alpha3 = 0.1f;
+                CGFloat alpha4 = 0.5f;
+                CGFloat locations[5] = {0.f,0.55f,0.55f,0.7f,1.f};
                 
                 CGFloat components[20] = {1,1,1,alpha0,1,1,1,alpha1,1,1,1,alpha2,1,1,1,alpha3,1,1,1,alpha4};
                 CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();

@@ -342,7 +342,7 @@ static char tabBarImageViewKey;
                              animations:^{
                                  self.selectedViewController.view.frame = self.childViewControllerFrame;
                              } completion:^(BOOL finished) {
-                                 _animationActive = NO;
+                                 self->_animationActive = NO;
                                  [self layout];
                              }];
         } else {
@@ -489,13 +489,13 @@ static char tabBarImageViewKey;
                                                                      newSelectedViewController.view.transform = CGAffineTransformMakeScale(1.f, 1.f);
                                                                  } completion:^(BOOL finished) {
                                                                      newSelectedViewController.view.frame = self.childViewControllerFrame;
-                                                                     _animationActive = NO;
+                                                                     self->_animationActive = NO;
                                                                      
                                                                      // call the delegate that we changed selection
                                                                      [self callDelegateDidSelectViewController:newSelectedViewController atIndex:self.selectedIndex];
                                                                  }];
                                             } else {
-                                                _animationActive = NO;
+                                                self->_animationActive = NO;
                                                 // call the delegate that we changed selection
                                                 [self callDelegateDidSelectViewController:newSelectedViewController atIndex:self.selectedIndex];
                                             }
