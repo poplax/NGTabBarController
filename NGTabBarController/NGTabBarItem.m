@@ -42,6 +42,7 @@
     if ((self = [super initWithFrame:frame])) {
         self.backgroundColor = [UIColor clearColor];
         
+        _drawShadow = YES;
         _selectedByUser = NO;
         
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -98,12 +99,6 @@
                 CGContextDrawImage(context, imageRect, self.selectedImage.CGImage);
             }
             else {
-                // default to shadow + gradient
-                // setup shadow
-                CGSize shadowOffset = CGSizeMake(0.0f, 1.0f);
-                CGFloat shadowBlur = 3.0;
-                CGColorRef cgShadowColor = [[UIColor blackColor] CGColor];
-                
                 // setup gradient
                 CGFloat alpha0 = 0.8f;
                 CGFloat alpha1 = 0.6f;
@@ -118,7 +113,12 @@
                 CGColorSpaceRelease(colorSpace);
                 
                 // set shadow
-                CGContextSetShadowWithColor(context, shadowOffset, shadowBlur, cgShadowColor);
+                if (self.drawShadow) {
+                    CGSize shadowOffset = CGSizeMake(0.0f, 1.0f);
+                    CGFloat shadowBlur = 3.0;
+                    CGColorRef cgShadowColor = [[UIColor blackColor] CGColor];
+                    CGContextSetShadowWithColor(context, shadowOffset, shadowBlur, cgShadowColor);
+                }
                 
                 // set transparency layer and clip to mask
                 CGContextBeginTransparencyLayer(context, NULL);

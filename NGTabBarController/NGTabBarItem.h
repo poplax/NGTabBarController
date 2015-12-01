@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIColor *selectedTitleColor;
 
+@property (nonatomic, assign) BOOL drawShadow;
+
 + (NGTabBarItem *)itemWithTitle:(NSString *)title image:(UIImage *)image;
 
 - (void)setSize:(CGSize)size;
