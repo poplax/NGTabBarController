@@ -44,7 +44,7 @@
 
 
 /** The designated initializer. */
-- (id)initWithDelegate:(id<NGTabBarControllerDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<NGTabBarControllerDelegate>)delegate;
 
 - (void)setTabBarHidden:(BOOL)tabBarHidden animated:(BOOL)animated;
 

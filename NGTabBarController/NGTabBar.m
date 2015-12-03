@@ -40,7 +40,7 @@
 #pragma mark - Lifecycle
 ////////////////////////////////////////////////////////////////////////
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;

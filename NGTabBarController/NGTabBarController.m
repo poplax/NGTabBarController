@@ -68,7 +68,7 @@ static char tabBarImageViewKey;
 #pragma mark - Lifecycle
 ////////////////////////////////////////////////////////////////////////
 
-- (id)initWithDelegate:(id<NGTabBarControllerDelegate>)delegate {
+- (instancetype)initWithDelegate:(id<NGTabBarControllerDelegate>)delegate {
     if ((self = [super initWithNibName:nil bundle:nil])) {
         _selectedIndex = NSNotFound;
         _oldSelectedIndex = NSNotFound;
@@ -84,7 +84,7 @@ static char tabBarImageViewKey;
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     return [self init];
 }
 
