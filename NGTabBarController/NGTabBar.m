@@ -109,9 +109,9 @@
             totalDimension -= appliedItemPadding;
             
             if (NGTabBarIsVertical(self.position)) {
-                currentFrameTop = floorf((self.bounds.size.height-totalDimension)/2.f);
+                currentFrameTop = (CGFloat)floor((self.bounds.size.height-totalDimension)/2.f);
             } else {
-                currentFrameLeft = floorf((self.bounds.size.width-totalDimension)/2.f);
+                currentFrameLeft = (CGFloat)floor((self.bounds.size.width-totalDimension)/2.f);
             }
         }
     }
