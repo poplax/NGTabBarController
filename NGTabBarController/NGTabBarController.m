@@ -410,8 +410,13 @@ static char tabBarImageViewKey;
 - (void)updateUI {
     if (self.selectedIndex != NSNotFound) {
         UIViewController *newSelectedViewController = self.selectedViewController;
+        
         [self.tabBar selectItemAtIndex:self.selectedIndex];
         
+        if (newSelectedViewController == nil) {
+            return;
+        }
+
         // show transition between old and new child viewcontroller
         if (self.oldSelectedIndex != NSNotFound) {
             UIViewController *oldSelectedViewController = [self.viewControllers objectAtIndex:self.oldSelectedIndex];
