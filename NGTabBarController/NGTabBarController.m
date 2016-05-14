@@ -36,6 +36,9 @@ static char tabBarImageViewKey;
 @property (nonatomic, readonly) BOOL containmentAPISupported;
 @property (nonatomic, readonly) UIViewAnimationOptions currentActiveAnimationOptions;
 
+// First ViewController index of NavigationController viewControllers.
+@property (nonatomic, assign) NSInteger indexOfFirstViewControllerGetsHidden;
+
 - (void)updateUI;
 - (void)layout;
 
@@ -70,6 +73,7 @@ static char tabBarImageViewKey;
 
 - (instancetype)initWithDelegate:(id<NGTabBarControllerDelegate>)delegate {
     if ((self = [super initWithNibName:nil bundle:nil])) {
+        _indexOfFirstViewControllerGetsHidden = -1;
         _selectedIndex = NSNotFound;
         _oldSelectedIndex = NSNotFound;
         _animation = NGTabBarControllerAnimationNone;
@@ -295,6 +299,9 @@ static char tabBarImageViewKey;
         self.oldSelectedIndex = _selectedIndex;
         _selectedIndex = selectedIndex;
         
+        // Change selected index, need reset first hidden index.
+        _indexOfFirstViewControllerGetsHidden = -1;
+        
         [self updateUI];
     }
 }
@@ -371,7 +378,13 @@ static char tabBarImageViewKey;
         NSUInteger indexOfViewControllerToPush = [navigationController.viewControllers indexOfObject:viewController];
         NSInteger indexOfViewControllerThatGetsHidden = indexOfViewControllerToPush - 1;
         
-        if (indexOfViewControllerThatGetsHidden >= 0) {
+        // _indexOfFirstViewControllerGetsHidden < 0 (default : -1), Set _indexOfFirstViewControllerGetsHidden value.
+        if (_indexOfFirstViewControllerGetsHidden < 0) {
+            _indexOfFirstViewControllerGetsHidden = indexOfViewControllerThatGetsHidden;
+        }
+        
+        if (indexOfViewControllerThatGetsHidden >= 0
+            && !self.tabBarHidden) {
             // add image of tabBar to the viewController's view to get a nice animation
             UIViewController *viewControllerThatGetsHidden = [navigationController.viewControllers objectAtIndex:indexOfViewControllerThatGetsHidden];
             UIImageView *tabBarImageRepresentation = [self.tabBar imageViewRepresentation];
@@ -393,7 +406,9 @@ static char tabBarImageViewKey;
         [navigationController.ng_originalNavigationControllerDelegate navigationController:navigationController willShowViewController:viewController animated:animated];
     }
     
-    if (!viewController.hidesBottomBarWhenPushed) {
+    NSUInteger indexOfViewController = [navigationController.viewControllers indexOfObject:viewController];
+    if (!viewController.hidesBottomBarWhenPushed
+        && indexOfViewController == _indexOfFirstViewControllerGetsHidden) {
         [self setTabBarHidden:NO animated:NO];
 
         // Remove temporary tabBar image
