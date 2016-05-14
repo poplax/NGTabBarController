@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0234A0821BD51B4C001600C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0234A0811BD51B4C001600C4 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		0234A0821BD51B4C001600C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0234A0811BD51B4C001600C4 /* Default-568h@2x.png */; };
+		49F299991CE779CE00C99857 /* NGTestHideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F299981CE779CE00C99857 /* NGTestHideBarViewController.m */; };
 		9B294EE01546DA96004E4A63 /* NGTestTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B294EDF1546DA96004E4A63 /* NGTestTabBarController.m */; };
 		9B6CDB46154B46A400E6B3C4 /* liveradio.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6CDB3E154B46A400E6B3C4 /* liveradio.png */; };
 		9B6CDB47154B46A400E6B3C4 /* liveradio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6CDB3F154B46A400E6B3C4 /* liveradio@2x.png */; };
@@ -46,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		0234A0811BD51B4C001600C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		49F299971CE779CE00C99857 /* NGTestHideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTestHideBarViewController.h; sourceTree = "<group>"; };
+		49F299981CE779CE00C99857 /* NGTestHideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTestHideBarViewController.m; sourceTree = "<group>"; };
 		9B294EDE1546DA96004E4A63 /* NGTestTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTestTabBarController.h; sourceTree = "<group>"; };
 		9B294EDF1546DA96004E4A63 /* NGTestTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTestTabBarController.m; sourceTree = "<group>"; };
 		9B6CDB3E154B46A400E6B3C4 /* liveradio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = liveradio.png; path = NGVerticalTabBarControllerDemo/Images/liveradio.png; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				9BEA2B6614ED1B4A00AEE977 /* AppDelegate.m */,
 				9BEA2B8014ED1BC300AEE977 /* NGColoredViewController.h */,
 				9BEA2B8114ED1BC300AEE977 /* NGColoredViewController.m */,
+				49F299971CE779CE00C99857 /* NGTestHideBarViewController.h */,
+				49F299981CE779CE00C99857 /* NGTestHideBarViewController.m */,
 				9B294EDE1546DA96004E4A63 /* NGTestTabBarController.h */,
 				9B294EDF1546DA96004E4A63 /* NGTestTabBarController.m */,
 				9BEA2B5D14ED1B4A00AEE977 /* Supporting Files */,
@@ -253,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEA2B6314ED1B4A00AEE977 /* main.m in Sources */,
+				49F299991CE779CE00C99857 /* NGTestHideBarViewController.m in Sources */,
 				9BEA2B6714ED1B4A00AEE977 /* AppDelegate.m in Sources */,
 				9BEA2B8214ED1BC300AEE977 /* NGColoredViewController.m in Sources */,
 				9B294EE01546DA96004E4A63 /* NGTestTabBarController.m in Sources */,

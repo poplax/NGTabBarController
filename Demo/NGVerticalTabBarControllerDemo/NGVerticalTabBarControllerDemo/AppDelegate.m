@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NGTestTabBarController.h"
 #import "NGColoredViewController.h"
+#import "NGTestHideBarViewController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +23,10 @@
     NGColoredViewController *vc1 = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
     NGColoredViewController *vc2 = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
     NGColoredViewController *vc3 = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
-    NGColoredViewController *vc4 = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
+//    NGColoredViewController *vc4 = [[NGColoredViewController alloc] initWithNibName:nil bundle:nil];
+    
+    NGTestHideBarViewController *hideBarViewController = [[NGTestHideBarViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *vc4 = [[UINavigationController alloc] initWithRootViewController:hideBarViewController];
     
     vc1.ng_tabBarItem = [NGTabBarItem itemWithTitle:@"Live" image:[UIImage imageNamed:@"liveradio"]];
     vc2.ng_tabBarItem = [NGTabBarItem itemWithTitle:@"Favorites" image:[UIImage imageNamed:@"myradio"]];
